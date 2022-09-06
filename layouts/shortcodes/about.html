@@ -1,0 +1,57 @@
+<!--Variables-->
+
+{{ $feature_image := "assets/images/features/headshot2.jpg"}}
+
+<!--Variables end-->
+
+<section id="bar" class="bg-white pt-0 pb-0">
+    <div class="container">
+      <div class="row">
+        <div class="col">
+          <hr class="hr-bar">
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- #bar end -->
+
+  <section id="feature2" class="section feature feature-left bg-white">
+    <div class="container">
+      <div class="row">
+        <div class="col-12 col-md-6 col-lg-6">
+          <div class="heading heading-1 mb-50 mt-30">
+            <h2 class="heading-title">{{.Get `title`}}</h2>
+            <p class="heading-desc">{{.Get `subtitle`}}</p>
+          </div>
+          <div class="feature-panel">
+            <div class="feature-img">
+              <img src="assets/images/icons/7.svg" alt="about"/>
+            </div>
+            <div class="feature-content">
+              <h3>{{.Get `top_title`}}</h3>
+              <p>{{.Get `top_content`}}</p>
+            </div>
+          </div>
+          <!-- .feature-panel end -->
+          <div class="feature-panel">
+            <div class="feature-img">
+              <img src="assets/images/icons/8.svg" alt="about"/>
+            </div>
+            <div class="feature-content">
+              <h3>{{.Get `bottom_title`}}</h3>
+              <p>{{.Get `bottom_content`}}</p>
+            </div>
+          </div>
+          <!-- .feature-panel end -->
+        </div>
+        <!-- .col-md-6 end -->
+        <div class="col-12 col-md-6 col-lg-6">
+          <img class="img-fluid img-shadow pull-right" src="{{$feature_image}}" alt="about"/>
+        </div>
+        <!-- .col-md-6 end -->
+
+      </div>
+      <!-- .row end -->
+    </div>
+    <!-- .container end -->
+  </section>

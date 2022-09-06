@@ -1,0 +1,116 @@
+<!--Variables-->
+
+{{ $icon1 := "assets/images/icons/1.svg"}}
+{{ $icon2 := "assets/images/icons/2.svg"}}
+{{ $icon3 := "assets/images/icons/3.svg"}}
+{{ $icon4 := "assets/images/icons/4.svg"}}
+{{ $icon5 := "assets/images/icons/5.svg"}}
+{{ $icon6 := "assets/images/icons/6.svg"}}
+
+<!--Variables end-->
+
+<section id="speciality" class="section feature feature-3 bg-white pb-80">
+    <div class="container">
+      <div class="row">
+        <div class="col-12 col-md-12 col-lg-12">
+          <div class="heading heading-1 text-center">
+            <h2 class="heading-title">{{.Get `title`}}</h2>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <!-- Panel #1 -->
+        <div class="col-12 col-md-4 col-lg-4">
+          <div class="feature-panel">
+            <div class="feature-img">
+              <img src="{{$icon1}}" alt="target">
+            </div>
+            <div class="feature-content">
+              <h3>{{.Get `topLeft_title`}}</h3>
+              <p>{{.Get `topLeft_content`}}</p>
+            </div>
+          </div>
+          <!-- .feature-panel end -->
+        </div>
+        <!-- .col-md-4 end -->
+
+        <!-- Panel #2 -->
+        <div class="col-12 col-md-4 col-lg-4">
+          <div class="feature-panel">
+            <div class="feature-img">
+              <img src="{{$icon2}}" alt="target">
+            </div>
+            <div class="feature-content">
+              <h3>{{.Get `topCenter_title`}}</h3>
+              <p>{{.Get `topCenter_content`}}</p>
+            </div>
+          </div>
+          <!-- .feature-panel end -->
+        </div>
+        <!-- .col-md-4 end -->
+
+        <!-- Panel #3 -->
+        <div class="col-12 col-md-4 col-lg-4">
+          <div class="feature-panel">
+            <div class="feature-img">
+              <img src="{{$icon3}}" alt="target">
+            </div>
+            <div class="feature-content">
+              <h3>{{.Get `topRight_title`}}</h3>
+              <p>{{.Get `topRight_content`}}</p>
+            </div>
+          </div>
+          <!-- .feature-panel end -->
+        </div>
+        <!-- .col-md-4 end -->
+
+        <!-- Panel #4 -->
+        <div class="col-12 col-md-4 col-lg-4">
+          <div class="feature-panel">
+            <div class="feature-img">
+              <img src="{{$icon4}}" alt="target">
+            </div>
+            <div class="feature-content">
+              <h3>{{.Get `bottomLeft_title`}}</h3>
+              <p>{{.Get `bottomLeft_content`}}</p>
+            </div>
+          </div>
+          <!-- .feature-panel end -->
+        </div>
+        <!-- .col-md-4 end -->
+
+        <!-- Panel #5 -->
+        <div class="col-12 col-md-4 col-lg-4">
+          <div class="feature-panel">
+            <div class="feature-img">
+              <img src="{{$icon5}}" alt="target">
+            </div>
+            <div class="feature-content">
+              <h3>{{.Get `bottomCenter_title`}}</h3>
+              <p>{{.Get `bottomCenter_content`}}</p>
+            </div>
+          </div>
+          <!-- .feature-panel end -->
+        </div>
+        <!-- .col-md-4 end -->
+
+        <!-- Panel #6 -->
+        <div class="col-12 col-md-4 col-lg-4">
+          <div class="feature-panel">
+            <div class="feature-img">
+              <img src="{{$icon6}}" alt="target">
+            </div>
+            <div class="feature-content">
+              <h3>{{.Get `bottomRight_title`}}</h3>
+              <p>{{.Get `bottomRight_content`}}</p>
+            </div>
+          </div>
+          <!-- .feature-panel end -->
+        </div>
+        <!-- .col-md-4 end -->
+
+      </div>
+      <!-- .row end -->
+    </div>
+    <!-- .container end -->
+  </section>

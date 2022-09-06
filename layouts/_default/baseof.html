@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en-US">
+    <head>
+	    <!-- Document Meta
+        ============================================= -->
+	    <meta charset="utf-8">
+	    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+	    <!--IE Compatibility Meta-->
+	    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+	    <link href="/assets/images/favicon/favicon.png" rel="icon">
+
+	    <!-- Fonts
+        ============================================= -->
+	    <link href='https://fonts.googleapis.com/css?family=Poppins:400,400i,500,600,700' rel='stylesheet' type='text/css'>
+
+	    <!-- Stylesheets
+        ============================================= -->
+	    <link href="/assets/css/external.css" rel="stylesheet">
+	    <link href="/assets/css/style.css" rel="stylesheet">
+
+	    <!-- HTML5 shim, for IE6-8 support of HTML5 elements. All other JS at the end of file. -->
+	    <!--[if lt IE 9]>
+          <script src="assets/js/html5shiv.js"></script>
+          <script src="assets/js/respond.min.js"></script>
+        <![endif]-->
+
+	    <!-- Document Title
+        ============================================= -->
+        {{ $title := site.Title }}
+        {{ if not .IsHome }}
+            {{ $title = printf "%s | %s" .Title site.Title }}
+        {{ end }}
+        <title>{{ $title }}</title>
+    </head>
+
+    <!--Variables-->
+    
+    {{ $navbar_1 := "Our Specialties"}}
+    {{ $navbar_2 := "Patient Testimonials"}}
+    {{ $navbar_3 := "Our Team" }}
+    {{ $navbar_4 := "Consultation" }}
+    {{$logo := "Your Logo Here" }}
+
+    <body class="body-scroll">
+        <div id="wrapperParallax" class="wrapper clearfix">
+            <header id="navbar-spy" class="header header-1 header-transparent header-fixed">
+                <nav id="primary-menu" class="navbar navbar-expand-lg navbar-dark">
+                  <div class="container">
+                    <a class="navbar-brand" href="/">
+                      <h2>{{$logo}}</h2>
+                    </a>
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarContent" aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation">
+                      <span class="toogle-inner"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarContent">
+                      <ul class="navbar-nav mr-auto">
+                        <li class="active">
+                          <a data-scroll="scrollTo" href="#speciality" style="color: black; font-weight: bold;">{{$navbar_1}}</a>
+                        </li>
+                        <li>
+                          <a data-scroll="scrollTo" href="#patients" style="color: black; font-weight: bold;">{{$navbar_2}}</a>
+                        </li>
+                        <li>
+                          <a data-scroll="scrollTo" href="#doctors" style="color: black; font-weight: bold;">{{$navbar_3}}</a>
+                        </li>
+                        <li>
+                          <a data-scroll="scrollTo" href="#consultation" style="color: black; font-weight: bold;">{{$navbar_4}}</a>
+                        </li>
+                      </ul>
+                    </div>
+                    <!--/.nav-collapse -->
+                  </div>
+                </nav>
+            </header>
+            <main>
+                {{block "hero" . }}{{end}}
+                {{block "main" . }}{{end}}
+            </main>
+
+            <!--Variables-->
+
+            {{$phone := "Your Phone Number Goes Here" }}
+            {{$address := "Your Address Goes Here" }}
+            {{$hours := "Your Business Hours Go Here" }}
+            {{$name := "Your Company Name" }}
+
+            <!--Variables end-->
+            <footer id="footerParallax" class="footer">
+                <div class="footer-top">
+                  <div class="container">
+                    <div class="row widget-boxes text-center">
+                      <div class="col-12 col-md-4 col-lg-4">
+                        <div class="widget-info-box">
+                          <div class="info-img">
+                            <img src="assets/images/footer/1.svg" alt="phone">
+                          </div>
+                          <h4>Phone</h4>
+                          <p>{{$phone}}</p>
+                        </div>
+                        <!-- .widget-info-box end -->
+                      </div>
+                      <!-- .col-md-4 end -->
+                      <div class="col-12 col-md-4 col-lg-4">
+                        <div class="widget-info-box">
+                          <div class="info-img">
+                            <img src="assets/images/footer/2.svg" alt="phone">
+                          </div>
+                          <h4>Location</h4>
+                          <p>{{$address}}</p>
+                        </div>
+                        <!-- .widget-info-box end -->
+                      </div>
+                      <!-- .col-md-4 end -->
+                      <div class="col-12 col-md-4 col-lg-4">
+                        <div class="widget-info-box">
+                          <div class="info-img">
+                            <img src="assets/images/footer/3.svg" alt="phone">
+                          </div>
+                          <h4>Hours of Operation</h4>
+                          <p>{{$hours}}</p>
+                        </div>
+                        <!-- .widget-info-box end -->
+                      </div>
+                      <!-- .col-md-4 end -->
+                    </div>
+                    <!-- .row end -->
+                  </div>
+                  <!-- .container end -->
+                </div>
+                <!-- .footer-top end -->
+                <div class="footer-bar">
+                  <div class="container">
+                    <div class="row">
+                      <div class="col">
+                        <hr>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- .container end -->
+                </div>
+                <!-- .footer-bar end -->
+                <div class="footer-bottom">
+                  <div class="container">
+                    <div class="row">
+                      <div class="col-12 col-md-6 col-lg-6">
+                        <div class="footer-copyright">
+                          <span>&copy; {{$name}} {{ .Date.Format "2006" }}, All Rights Reserved.</span>
+                        </div>
+                      </div>
+                      <!-- .col-md-6 end -->
+                      <div class="col-12 col-md-6 col-lg-6">
+                        <div class="footer-social">
+                          <a class="facebook" href="#consultation">
+                            <i class="fa fa-facebook"></i>
+                          </a>
+                          <a class="twitter" href="#consultation">
+                            <i class="fa fa-twitter"></i>
+                          </a>
+                          <a class="dribbble" href="#consultation">
+                            <i class="fa fa-dribbble"></i>
+                          </a>
+                          <a class="instagram" href="#consultation">
+                            <i class="fa fa-instagram"></i>
+                          </a>
+                        </div>
+                      </div>
+                      <!-- .col-md-6 end -->
+                    </div>
+                    <!-- .row end -->
+                  </div>
+                  <!-- .container end -->
+                </div>
+                <!-- .footer-bottom end -->
+              </footer>
+              <!-- #footer end -->
+        </div>
+         <!-- Footer Scripts ============================================= -->
+        <script src="assets/js/jquery-3.3.1.min.js"></script>
+        <script src="assets/js/plugins.js"></script>
+        <script src="assets/js/functions.js"></script>
+    </body>
+</html>

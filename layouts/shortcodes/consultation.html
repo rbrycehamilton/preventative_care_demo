@@ -1,0 +1,56 @@
+<section id="consultation" class="section feature feature-2 bg-gray">
+    <div class="container">
+      <div class="row">
+        <h1>{{.Get `title`}}</h1>
+        <div class="col-12 col-md-6 col-lg-6">
+          <div class="feature-panel">
+            <div class="feature-content">
+              <h3><!-- Calendly link widget begin -->
+                <link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet">
+                <script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript" async></script>
+                <a href="" onclick="Calendly.initPopupWidget({url: 'https://calendly.com/webnertia/strategy'});return false;">Book A Call Today</a>
+                <!-- Calendly link widget end --></h3>
+              <p class="mb-30">{{.Get `call_text`}}</p>
+            </div>
+          </div>
+          <!-- .feature-panel end -->
+        </div>
+        <!-- .col-md-6 end -->
+        <div class="col-12 col-md-6 col-lg-5 offset-lg-1">
+          <div class="form-wrapper">
+            <div class="heading">
+              <h3 class="heading-title">{{.Get `send`}}</h3>
+            </div>
+            <!-- .form-group end -->
+            <form class="contactForm mb-0" method="post" data-netlify="true">
+              <div id="result" class="contact-result"></div>
+              <div class="form-group">
+                <label for="name">{{.Get `name`}}*</label>
+                <input type="text" class="form-control" name="name" id="name" required="required">
+              </div>
+              <!-- .form-group end -->
+              <div class="form-group">
+                <label for="email">{{.Get `email`}}*</label>
+                <input type="email" class="form-control" name="email" id="email" required="required">
+              </div>
+              <!-- .form-group end -->
+              <div class="form-group">
+                <label for="message">{{.Get `message`}}</label>
+                <textarea class="form-control" name="message" id="message" required rows="100"></textarea>
+              </div>
+              <!-- .form-group end -->
+             
+              <div class="form-group">
+                <input type="submit" value="Send" name="submit" class="btn btn--primary btn--block">
+              </div>
+              <!-- .form-group end -->
+            </form>
+          </div>
+        </div>
+        <!-- .col-md-6 end -->
+
+      </div>
+      <!-- .row end -->
+    </div>
+    <!-- .container end -->
+  </section>
